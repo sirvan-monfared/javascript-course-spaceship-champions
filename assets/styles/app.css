@@ -1,0 +1,91 @@
+@font-face {
+	font-family: 'Yekan';
+	src: url( '../fonts/Yekan.eot' );
+	src: url( '../fonts/Yekan.eot?#iefix' ) format( 'embedded-opentype' ),
+		url( '../fonts/Yekan.woff2' ) format( 'woff2' ),
+		url( '../fonts/Yekan.woff' ) format( 'woff' ),
+		url( '../fonts/Yekan.ttf' ) format( 'truetype' ),
+		url( '../fonts/Yekan.svg#Yekan' ) format( 'svg' );
+	font-weight: normal;
+	font-style: normal;
+}
+* {
+  font-family: 'YEKAN';
+}
+h1,
+h2 {
+  margin: 0;
+  margin-bottom: 5px
+}
+h1 {
+  color:white;
+  text-align: center;
+}
+body {
+  background: url(../images/spaceships-champions.jpg) no-repeat;
+  background-size: cover;
+}
+.wrapper {
+  max-width: 700px;
+  margin: 50px auto;
+}
+.game {
+  display: flex;
+  gap: 20px;
+  border: 1px solid gray;
+  padding: 10px;
+  direction: rtl;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+}
+
+#health-items {
+  flex: 1;
+}
+
+.health span {
+  font-size: 22px;
+}
+.health.player {
+  color: green;
+  margin-bottom: 35px; 
+}
+.health.enemy {
+  color: red;
+  margin-bottom:0
+}
+#controls {
+  align-self: center;
+}
+#controls button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+button {
+  background: none;
+  box-shadow: none;
+  border: none;
+  border: 1px solid rgb(170, 170, 170);
+  background-color: rgb(170, 170, 170);
+  color: black;
+  padding: 8px 4px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+button:hover {
+  opacity: 0.7;
+}
+
+#bonus-life {
+  color: white;
+  background: #13a3b3;
+  border: 1px solid #13a3b3;
+  padding: 0 8px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 0 12px;
+  font-size: 16px
+}

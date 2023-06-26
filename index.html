@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SpaceShip Champions</title>
+    <link rel="stylesheet" href="assets/styles/app.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <h1>SPACSHIP CHAMPIONS</h1>
+
+        <div class="game">
+            <section id="health-items">
+                <h2>سلامتی سفینه دشمن</h2>
+                <div class="health player">
+                    <span id="max-enemy-health"></span>
+                    /
+                    <span id="current-enemy-health"></span>
+                </div>
+                <h2>سلامتی سفینه شما<span id="bonus-life">1</span></h2>
+                <div class="health enemy">
+                    <span id="max-player-health"></span>
+                    /
+                    <span id="current-player-health"></span>
+                </div>
+            </section>
+            <section id="controls">
+                <button id="attack-btn">حمله لیزری</button>
+                <button id="strong-attack-btn">حمله موشکی (قدرتمند)</button>
+                <button id="heal-btn">افزایش سلامتی</button>
+                <button id="log-btn">نمایش لاگ</button>
+            </section>
+        </div>
+    </div>
+
+
+    <script src="assets/scripts/functions.js"></script>
+    <script src="assets/scripts/app.js"></script>
+</body>
+
+</html>
