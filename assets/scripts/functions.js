@@ -18,7 +18,7 @@ function initiatePlayerAndEnemyHealth(maxLife) {
 }
 
 function dealDamageToEnemy(damage) {
-  const dealtDamage = Math.random() * damage;
+  const dealtDamage = Math.floor(Math.random() * damage);
   enemyHealthElm.innerHTML = +enemyHealthElm.innerHTML - dealtDamage;
 
   return dealtDamage;
