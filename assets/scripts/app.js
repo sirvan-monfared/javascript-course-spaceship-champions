@@ -188,7 +188,23 @@ function healPlayer() {
 }
 
 function logHandler() {
-    console.log(battleLog);
+
+    // for (let i = 0; i < battleLog.length; i++) {
+    //     console.log(battleLog[i]);
+    //     console.log('---------');
+    // }
+
+    let i = 0;
+    for (const logEl of battleLog) {
+        console.log(logEl);
+        console.log(i + '---------');
+        i++;
+    }
+
+
+
+
+    // console.log(battleLog);
 }
 
 attackButtonElm.addEventListener("click", attackHandler);
