@@ -43,31 +43,66 @@ function addToLog(action, data, playerHealth, enemyHealth) {
         enemyHealth: enemyHealth
     }
 
-    if (action === LOG_MODE_PLAYER_NORMAL_ATTACK) {
-        log.target = 'PLAYER';
-    } else if (action === LOG_MODE_PLAYER_POWERL_ATTACK) {
-        log.target = 'PLAYER';
-    } else if (action === LOG_MODE_ENEMY_ATTACK) {
-        log.target = 'ENEMY';
-    } else if (action === LOG_MODE_PLAYER_HEAL) {
-        log = {
-            action: action,
-            value: data,
-            target: 'PLAYER',
-            playerHealth: playerHealth,
-            enemyHealth: enemyHealth
-        }
-    } else if (action === LOG_MODE_GAME_OVER) {
-        log = {
-            action: action,
-            value: data,
-            playerHealth: playerHealth,
-            enemyHealth: enemyHealth
-        }
+    switch (action) {
+        case LOG_MODE_PLAYER_NORMAL_ATTACK:
+            log.target = 'PLAYER';
+            break;
+        case LOG_MODE_PLAYER_POWERL_ATTACK:
+            log.target = 'PLAYER';
+            break;
+        case LOG_MODE_ENEMY_ATTACK:
+            log.target = 'ENEMY';
+            break;
+        case LOG_MODE_PLAYER_HEAL:
+            log = {
+                action: action,
+                value: data,
+                target: 'PLAYER',
+                playerHealth: playerHealth,
+                enemyHealth: enemyHealth
+            }
+            break;
+        case LOG_MODE_GAME_OVER:
+            log = {
+                action: action,
+                value: data,
+                playerHealth: playerHealth,
+                enemyHealth: enemyHealth
+            }
+            break;
+        default:
+            log = {}
+            break;
+        
     }
 
 
     battleLog.push(log);
+
+    // if (action === LOG_MODE_PLAYER_NORMAL_ATTACK) {
+    //     log.target = 'PLAYER';
+    // } else if (action === LOG_MODE_PLAYER_POWERL_ATTACK) {
+    //     log.target = 'PLAYER';
+    // } else if (action === LOG_MODE_ENEMY_ATTACK) {
+    //     log.target = 'ENEMY';
+    // } else if (action === LOG_MODE_PLAYER_HEAL) {
+    //     log = {
+    //         action: action,
+    //         value: data,
+    //         target: 'PLAYER',
+    //         playerHealth: playerHealth,
+    //         enemyHealth: enemyHealth
+    //     }
+    // } else if (action === LOG_MODE_GAME_OVER) {
+    //     log = {
+    //         action: action,
+    //         value: data,
+    //         playerHealth: playerHealth,
+    //         enemyHealth: enemyHealth
+    //     }
+    // }
+
+
 }
 
 function  reset() {
