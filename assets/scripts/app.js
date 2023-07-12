@@ -193,11 +193,17 @@ function logHandler() {
     //     console.log(battleLog[i]);
     //     console.log('---------');
     // }
-
+    
     let i = 0;
     for (const logEl of battleLog) {
-        console.log(logEl);
-        console.log(i + '---------');
+        // console.log(logEl);
+        // console.log(logEl.action);
+        console.log(`iteration #${i}`);
+        for (const key in logEl) {
+            console.log(`${key} : ${logEl[key]}`);
+        }
+
+        console.log('------');
         i++;
     }
 
